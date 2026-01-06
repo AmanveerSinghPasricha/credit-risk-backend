@@ -43,9 +43,9 @@ setup_cors(app)
 # -------------------------------------------------
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-MODEL_PATH = BASE_DIR / "backend" / "model" / "credit_risk_model.pkl"
-RF_PIPELINE_PATH = BASE_DIR / "backend" / "model" / "rf_pipeline.pkl"
-SHAP_BACKGROUND_PATH = BASE_DIR / "backend" / "model" / "shap_background.csv"
+MODEL_PATH = BASE_DIR / "credit-risk-management" / "model" / "credit_risk_model.pkl"
+RF_PIPELINE_PATH = BASE_DIR / "credit-risk-management" / "model" / "rf_pipeline.pkl"
+SHAP_BACKGROUND_PATH = BASE_DIR / "credit-risk-management" / "model" / "shap_background.csv"
 
 BEST_THRESHOLD = 0.42
 
