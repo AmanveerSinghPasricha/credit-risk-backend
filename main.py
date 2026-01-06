@@ -43,9 +43,13 @@ setup_cors(app)
 # -------------------------------------------------
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-MODEL_PATH = BASE_DIR / "credit-risk-management" / "model" / "credit_risk_model.pkl"
-RF_PIPELINE_PATH = BASE_DIR / "credit-risk-management" / "model" / "rf_pipeline.pkl"
-SHAP_BACKGROUND_PATH = BASE_DIR / "credit-risk-management" / "model" / "shap_background.csv"
+# MODEL_PATH = BASE_DIR / "credit-risk-management" / "model" / "credit_risk_model.pkl"
+# RF_PIPELINE_PATH = BASE_DIR / "credit-risk-management" / "model" / "rf_pipeline.pkl"
+# SHAP_BACKGROUND_PATH = BASE_DIR / "credit-risk-management" / "model" / "shap_background.csv"
+
+MODEL_PATH = BASE_DIR  / "model" / "credit_risk_model.pkl"
+RF_PIPELINE_PATH = BASE_DIR  / "model" / "rf_pipeline.pkl"
+SHAP_BACKGROUND_PATH = BASE_DIR  / "model" / "shap_background.csv"
 
 BEST_THRESHOLD = 0.42
 
@@ -187,7 +191,7 @@ def predict_credit_risk(request: Request, payload: CreditRiskRequest):
         data = payload.model_dump()
 
         # -------------------------------------------------
-        # 🔒 HARD BUSINESS VALIDATIONS
+        # HARD BUSINESS VALIDATIONS
         # -------------------------------------------------
         age = data["person_age"]
 
@@ -210,7 +214,7 @@ def predict_credit_risk(request: Request, payload: CreditRiskRequest):
             )
 
         # -------------------------------------------------
-        # ✅ DERIVED FIELD (AUTHORITATIVE)
+        # DERIVED FIELD (AUTHORITATIVE)
         # -------------------------------------------------
         data["loan_percent_income"] = (
             data["loan_amnt"] / data["person_income"]
