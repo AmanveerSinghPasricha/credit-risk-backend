@@ -1,9 +1,9 @@
 fastapi
-uvicorn
+uvicorn[standard]
 pandas
 numpy
 scikit-learn
 imbalanced-learn
-xgboost
-pydantic
 shap
+slowapi
+python-multipart
