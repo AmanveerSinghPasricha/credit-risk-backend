@@ -7,3 +7,4 @@ imbalanced-learn
 shap
 slowapi
 python-multipart
+xgboost
