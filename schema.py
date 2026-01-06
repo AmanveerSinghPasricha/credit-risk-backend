@@ -33,8 +33,12 @@ class CreditRiskRequest(BaseModel):
     )
 
     # Fraction of income (0–1)
-    loan_percent_income: float = Field(
-        ..., ge=0, le=1, example=0.18
+    # loan_percent_income: float = Field(
+    #     ..., ge=0, le=1, example=0.18
+    # )
+
+    loan_percent_income: Optional[float] = Field(
+        None, ge=0, le=1, example=0.18
     )
 
     cb_person_cred_hist_length: float = Field(
