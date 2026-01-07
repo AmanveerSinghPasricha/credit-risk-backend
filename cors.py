@@ -5,8 +5,7 @@ def setup_cors(app):
         CORSMiddleware,
         allow_origins=[
             "http://localhost:3000",
-            "https://your-frontend.onrender.com",
-            "https://your-frontend.vercel.app"
+            "https://credit-risk-frontend-five.vercel.app"
         ],
         allow_credentials=True,
         allow_methods=["*"],
